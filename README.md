@@ -9,14 +9,20 @@
 博客的 [Github地址](https://github.com/eddycjy/blog) ，
 作者的 [Github地址](https://github.com/eddycjy)。
 
-里面看到了 [Gin框架示例](https://github.com/eddycjy/go-gin-example)，
-相应的一系列 [博文](https://github.com/EDDYCJY/go-gin-example/blob/master/README_ZH.md)，
-里面说是 [Gin实践](https://segmentfault.com/a/1190000013297625) 的连载，在 segmentfault 网站上，
-另外在作者博客中也记录了这个系列，不过内容看着不一样， [gin](https://eddycjy.com/tags/gin/)，
-看着内容是作者博客 [Go语言入门系列](https://eddycjy.com/go-categories/) 中的一部分。
-对比看了下，segmentfault 上那个是2018年写的，好多已经过时了，就不要看了。
+里面看到了 [gRPC 和 Protobuf] 的相关内容。
 
-作者还有 [Go 语言进阶之旅](https://golang1.eddycjy.com/)。
+RPC 代指远程过程调用（Remote Procedure Call），它的调用包含了传输协议和编码（对象序列）协议等等，
+允许运行于一台计算机的程序调用另一台计算机的子程序，而开发人员无需额外地为这个交互作用编程，
+因此我们也常常称 RPC 调用，就像在进行本地函数调用一样方便。
+
+gRPC 是一个高性能、开源和通用的 RPC 框架，面向移动和基于 HTTP/2 设计。目前提供 C、Java 和 Go 语言等等版本，
+分别是：grpc、grpc-java、grpc-go，其中 C 版本支持 C、C++、Node.js、Python、Ruby、Objective-C、PHP 和 C# 支持。
+gRPC 基于 HTTP/2 标准设计，带来诸如双向流、流控、头部压缩、单 TCP 连接上的多复用请求等特性。
+这些特性使得其在移动设备上表现更好，在一定的情况下更节省空间占用。
+gRPC 的接口描述语言（Interface description language，缩写 IDL）使用的是 Protobuf，都是由 Google 开源的。
+
+Protocol Buffers（Protobuf）是一种与语言、平台无关，可扩展的序列化结构化数据的数据描述语言，
+我们常常称其为 IDL，常用于通信协议，数据存储等等，相较于 JSON、XML，它更小、更快。
 
 这是跟着作者学习的一个示例项目。
 
