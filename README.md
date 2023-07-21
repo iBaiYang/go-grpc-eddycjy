@@ -20,15 +20,33 @@
 
 这是跟着作者学习的一个示例项目。
 
+## 准备
+
+win10下，在github <https://github.com/protocolbuffers/protobuf/releases/ >下载 Protocol Buffers 。
+解压后，设置环境变量：`G:\WorkSoft\protoc\bin` 。重启，查看版本(libprotoc 23.4)：
+```
+> protoc --version
+```
+
+protoc 插件安装：
+> go get -u github.com/golang/protobuf/protoc-gen-go@v1.3.2
+
+到目录 `G:\GoPath\pkg\mod\github.com\golang\protobuf@v1.3.2\protoc-gen-go` 下执行 `go build .`，
+把生成的 `protoc-gen-go.exe` 移动到目录 `G:\GoPath\bin` 下。
+
 ## 命令
 
 ### 获取包
 
+protoc 插件安装：
+> go get -u github.com/golang/protobuf/protoc-gen-go@v1.3.2
+
 ### 实操
 
 生成 proto 文件：
-> protoc --go_out=plugins=grpc:. ./proto/*.proto 
-
+```
+> protoc --go_out=plugins=grpc:. ./proto/helloworld.proto
+```
 
 
 
