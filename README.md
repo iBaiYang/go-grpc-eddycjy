@@ -66,7 +66,9 @@ gRPC 库安装：
 > protoc --go_out=plugins=grpc:. ./proto/serversidestreamingrpc.proto
 ```
 
+#### Client-side streaming RPC：客户端流式 RPC
 
-
-
+```
+> protoc --go_out=plugins=grpc:. ./proto/clientsidestreamingrpc.proto
+```
 
