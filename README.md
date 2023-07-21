@@ -72,3 +72,8 @@ gRPC 库安装：
 > protoc --go_out=plugins=grpc:. ./proto/clientsidestreamingrpc.proto
 ```
 
+#### Bidirectional streaming RPC：双向流式 RPC
+
+```
+> protoc --go_out=plugins=grpc:. ./proto/bidirectionalstreamingrpc.proto
+```
