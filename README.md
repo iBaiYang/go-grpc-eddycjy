@@ -41,14 +41,20 @@ protoc 插件安装：
 protoc 插件安装：
 > go get -u github.com/golang/protobuf/protoc-gen-go@v1.3.2
 
+gRPC 库安装：
+> go get -u google.golang.org/grpc@v1.29.1
+
 ### 实操
 
 生成 proto 文件：
 ```
 > protoc --go_out=plugins=grpc:. ./proto/helloworld.proto
 ```
+#### Unary RPC：一元 RPC
 
-
+```
+> protoc --go_out=plugins=grpc:. ./proto/unaryrpc.proto
+```
 
 
 
