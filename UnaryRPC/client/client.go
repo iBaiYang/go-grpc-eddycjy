@@ -24,7 +24,7 @@ func main() {
 }
 
 func SayHello(client pb.GreeterClient) error {
-	resp, _ := client.SayHello(context.Background(), &pb.HelloRequest{Name: "eddycjy"})
+	resp, _ := client.SayHello(context.Background(), &pb.HelloRequest{Name: "abcdef"})
 	log.Printf("client.SayHello resp: %s", resp.Message)
 	return nil
 }

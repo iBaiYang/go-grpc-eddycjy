@@ -56,7 +56,15 @@ gRPC 库安装：
 > protoc --go_out=plugins=grpc:. ./proto/unaryrpc.proto
 ```
 
+> go run server.go
 
+> go run client.go
+
+#### Server-side streaming RPC：服务端流式 RPC
+
+```
+> protoc --go_out=plugins=grpc:. ./proto/serversidestreamingrpc.proto
+```
 
 
 
