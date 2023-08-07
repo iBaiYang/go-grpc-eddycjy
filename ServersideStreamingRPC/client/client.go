@@ -22,10 +22,10 @@ func main() {
 
 	client := pb.NewGreeterClient(conn)
 	r := pb.HelloRequest{Name: "abcdef"}
-	_ = SayList(client, &r)
+	_ = DoSayList(client, &r)
 }
 
-func SayList(client pb.GreeterClient, r *pb.HelloRequest) error {
+func DoSayList(client pb.GreeterClient, r *pb.HelloRequest) error {
 	stream, _ := client.SayList(context.Background(), r)
 	for {
 		resp, err := stream.Recv()

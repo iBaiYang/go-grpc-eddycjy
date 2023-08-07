@@ -20,10 +20,10 @@ func main() {
 	defer conn.Close()
 
 	client := pb.NewGreeterClient(conn)
-	_ = SayHello(client)
+	_ = DoSayHello(client)
 }
 
-func SayHello(client pb.GreeterClient) error {
+func DoSayHello(client pb.GreeterClient) error {
 	resp, _ := client.SayHello(context.Background(), &pb.HelloRequest{Name: "abcdef"})
 	log.Printf("client.SayHello resp: %s", resp.Message)
 	return nil

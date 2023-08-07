@@ -22,10 +22,10 @@ func main() {
 
 	client := pb.NewGreeterClient(conn)
 	r := pb.HelloRequest{Name: "abcdef"}
-	_ = SayRoute(client, &r)
+	_ = DoSayRoute(client, &r)
 }
 
-func SayRoute(client pb.GreeterClient, r *pb.HelloRequest) error {
+func DoSayRoute(client pb.GreeterClient, r *pb.HelloRequest) error {
 	stream, _ := client.SayRoute(context.Background())
 	for n := 0; n <= 6; n++ {
 		_ = stream.Send(r)

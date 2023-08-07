@@ -21,10 +21,10 @@ func main() {
 
 	client := pb.NewGreeterClient(conn)
 	r := pb.HelloRequest{Name: "abcdef"}
-	_ = SayRecord(client, &r)
+	_ = DoSayRecord(client, &r)
 }
 
-func SayRecord(client pb.GreeterClient, r *pb.HelloRequest) error {
+func DoSayRecord(client pb.GreeterClient, r *pb.HelloRequest) error {
 	stream, _ := client.SayRecord(context.Background())
 	for n := 0; n < 6; n++ {
 		_ = stream.Send(r)
